@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5dbnBb7XzCJrxkRWuSDD1z/ERxm/1MkUgUtQpChWJ9IfB+SnkBRDDcA321H3TP59d7mkVqhUK08/lFc2scmWig==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yvowon\\Documents\\BusBoardCSharp\\BusBoardCSharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yvowon\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512"
+  ],
+  "logs": []
+}
