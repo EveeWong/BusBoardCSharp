@@ -38,9 +38,25 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1-beta1, )"
+            },
             "RestSharp": {
               "target": "Package",
               "version": "[106.11.7, )"
+            },
+            "RestSharp.Serializers.SystemTextJson": {
+              "target": "Package",
+              "version": "[106.11.7, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             }
           },
           "imports": [
