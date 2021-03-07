@@ -15,18 +15,20 @@ namespace BusBoardCSharp
    
         static void ValidatePostcode(string postcode)
         {
-
             var client = new RestClient("https://api.postcodes.io");
             var request = new RestRequest($"/postcodes/{postcode}", DataFormat.Json);
             var response = client.Get<PostcodeJsonModel>(request);
  
-
 
             if (response.IsSuccessful) {
                 // Console.WriteLine(response.Content);
                 // Console.WriteLine(response.Data.Result);
                 // Console.WriteLine(response.Data.Result.Longitude);
                 // Console.WriteLine(response.Data.Result.Latitude);
+                string latitude = response.Data.Result.Latitude;
+                string longitude = response.Data.Result.Longitude;
+
+                GetStopCode(latitude, longitude);
 
     
             } else {
@@ -36,15 +38,16 @@ namespace BusBoardCSharp
             }
         }
 
-        static void GetStopCode() {
+        static void GetStopCode(string latitude, string longitude) {
             var client = new RestClient("https://api.tfl.gov.uk");
-            var request = new RestRequest($"/Stoppoint?lat=51.508189&lon=-0.277934&stoptypes=NaptanPublicBusCoachTram");
+            var request = new RestRequest($"/Stoppoint?lat={latitude}&lon={longitude}&stoptypes=NaptanPublicBusCoachTram");
 
             var response = client.Get<StopCodeJsonModel>(request);
-
+            
             // Console.WriteLine(response.Content);
-            Console.WriteLine(response.Data.NaptanId);
-
+            foreach (var code in response.Data.stopPoints) {
+                Console.WriteLine(code.NaptanId);
+            }
         }
 
         static void NextFiveBuses(string stopCode) {
@@ -59,15 +62,10 @@ namespace BusBoardCSharp
 
         static void Main(string[] args)
         {
-            // Console.WriteLine("Please enter a valid London postcode:");
-            // string userPostcode = Console.ReadLine();
+            Console.WriteLine("Please enter a valid London postcode:");
+            string postcode = Console.ReadLine();
 
-            // ValidatePostcode(userPostcode);
-
-                GetStopCode();
-
-    
-        //     490003075QN
+            ValidatePostcode(postcode);
 
         }
 
