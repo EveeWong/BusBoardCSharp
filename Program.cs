@@ -44,10 +44,12 @@ namespace BusBoardCSharp
 
             var response = client.Get<StopCodeJsonModel>(request);
             
-            // Console.WriteLine(response.Content);
-            foreach (var code in response.Data.stopPoints) {
-                Console.WriteLine(code.NaptanId);
-            }
+            // Console.WriteLine(response.Content)
+ 
+                Console.WriteLine(response.Data.stopPoints[0].NaptanId);
+                Console.WriteLine(response.Data.stopPoints[1].NaptanId);
+
+        
         }
 
         static void NextFiveBuses(string stopCode) {
