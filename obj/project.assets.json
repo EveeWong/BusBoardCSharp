@@ -4657,11 +4657,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yvowon\\Documents\\BusBoardCSharp\\BusBoardCSharp.csproj",
+      "projectUniqueName": "C:\\Users\\yvowon\\Documents\\BusBoardCSharp - Refactor\\BusBoardCSharp.csproj",
       "projectName": "BusBoardCSharp",
-      "projectPath": "C:\\Users\\yvowon\\Documents\\BusBoardCSharp\\BusBoardCSharp.csproj",
+      "projectPath": "C:\\Users\\yvowon\\Documents\\BusBoardCSharp - Refactor\\BusBoardCSharp.csproj",
       "packagesPath": "C:\\Users\\yvowon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yvowon\\Documents\\BusBoardCSharp\\obj\\",
+      "outputPath": "C:\\Users\\yvowon\\Documents\\BusBoardCSharp - Refactor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yvowon\\AppData\\Roaming\\NuGet\\NuGet.Config"
